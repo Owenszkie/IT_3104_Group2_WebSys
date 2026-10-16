@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Student Profile Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="home">
+        <h1>Student Profile Portal</h1>
+        <p>Welcome to my personal student profile and academic dashboard.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Profile</a>
+        <a href="#grades">Grades</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <aside>
+            <h2>Quick Profile</h2>
+
+            <figure>
+                <img src="download.jpg"
+                     alt="Student profile picture">
+                <figcaption>My Student Profile</figcaption>
+            </figure>
+
+            <p><strong>Name:</strong> John Jerick Caguimbal</p>
+            <p><strong>Course:</strong> BS Information Technology</p>
+            <p><strong>Year Level:</strong> Third Year</p>
+            <p><strong>Status:</strong>
+                <span class="status">Active Student</span>
+            </p>
+        </aside>
+
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+
+                <p>
+                    Hello! I am a <b>college student</b> taking
+                    <i>Information Technology</i>. I am interested in
+                    <strong>programming and web development</strong>.
+                    My goal is to improve my skills and become an
+                    <em>IT professional</em>.
+                </p>
+
+                <p>
+                    My favorite subject is
+                    <span class="highlight">Web Development</span>
+                    because I enjoy learning how to create websites.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="media">
+                <h2>Media and Multimedia</h2>
+
+                <figure>
+                    <img class="main-image"
+                         src="https://placehold.co/700x260/e0f2fe/1e40af?text=My+Student+Portal"
+                         alt="Student portal illustration">
+                    <figcaption>
+                        An illustration representing my student portal.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <hr>
+
+            <section id="grades">
+                <h2>Academic Record</h2>
+
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Subject</th>
+                            <th>Units</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">Your Name</td>
+                            <td>Web Development</td>
+                            <td>3</td>
+                            <td>1.50</td>
+                        </tr>
+
+                        <tr>
+                            <td>Database Management</td>
+                            <td>3</td>
+                            <td>1.75</td>
+                        </tr>
+
+                        <tr>
+                            <td>Programming</td>
+                            <td>3</td>
+                            <td>1.50</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><strong>Total Units</strong></td>
+                            <td colspan="2"><strong>9 Units</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <hr>
+
+            <section id="contact">
+                <h2>Registration and Feedback Form</h2>
+
+                <form action="https://httpbin.org/post"
+                      method="POST"
+                      enctype="multipart/form-data">
+
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname"
+                           placeholder="Enter your full name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="example@email.com" required>
+
+                    <label for="phone">Telephone Number:</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="09123456789"
+                           pattern="[0-9]{11}"
+                           title="Enter an 11-digit telephone number"
+                           required>
+
+                    <label for="course">Choose Your Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Select Course --</option>
+
+                        <optgroup label="Computer Science">
+                            <option value="computer-science">
+                                Computer Science
+                            </option>
+                        </optgroup>
+
+                        <optgroup label="Information Technology">
+                            <option value="information-technology">
+                                Information Technology
+                            </option>
+                        </optgroup>
+                    </select>
+
+                    <label for="language">
+                        Favorite Programming Language:
+                    </label>
+
+                    <input list="languages" id="language" name="language"
+                           placeholder="Choose or type a language">
+
+                    <datalist id="languages">
+                        <option value="Python">
+                        <option value="Java">
+                        <option value="HTML">
+                        <option value="JavaScript">
+                        <option value="C++">
+                    </datalist>
+
+                    <p><strong>Select Electives:</strong></p>
+
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="electives"
+                                   value="Web Development">
+                            Web Development
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="electives"
+                                   value="Mobile Development">
+                            Mobile Development
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="electives"
+                                   value="Cybersecurity">
+                            Cybersecurity
+                        </label>
+                    </div>
+
+                    <label for="file">Upload a File:</label>
+                    <input type="file" id="file" name="file">
+
+                    <label for="message">Comments or Feedback:</label>
+                    <textarea id="message" name="message" rows="4"
+                              placeholder="Write your feedback here..."></textarea>
+
+                    <div class="button-group">
+                        <button type="submit">Submit Form</button>
+                        <button type="reset" class="reset-button">
+                            Reset Form
+                        </button>
+                    </div>
+                </form>
+
+                <h3>Search Form (GET Method)</h3>
+
+                <form action="https://www.google.com/search" method="GET">
+                    <label for="search">Search Information:</label>
+                    <input type="text" id="search" name="q"
+                           placeholder="Enter search keywords" required>
+                           <hr>
+
+                    <button type="submit">Search</button>
+                </form>
+            </section>
+        </main>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Student Profile Portal | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
