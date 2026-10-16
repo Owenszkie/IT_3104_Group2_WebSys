@@ -1,0 +1,41 @@
+<head>
+    <title>
+        Forms
+    </title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+    <form>
+        <label for="firstname">First Name: </label>
+        <input type="text" name="firstname" id="firstname">
+    <br>
+    <br>
+        <label for="lastname">Last Name: </label>
+        <input type="text" name="lastname" id="lastname">
+    <br>
+    <br>
+        <label for="phone">Phone Number: </label>
+        <input type="tel" id="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+    <br>
+    <br>
+        <p><b>Account Security:</b></p>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+    <br>
+    <br>
+        <p><b>Select splits: </b></p>
+        <input type="checkbox" id="char1" name="char1" value="ppl">
+        <label for="char1">Push Pull Legs</label><br>
+
+        <input type="checkbox" id="char2" name="char2" value="upperlower">
+        <label for="char2">Upper Lower</label><br>
+
+        <input type="checkbox" id="char3" name="char3" value="fullbody">
+        <label for="char3">Full Body</label><br>    
+    <br>
+    <br>
+        <button type="submit">Submit</button>
+        <button type="Reset">Reset</button>
+    </form>
+</body>
